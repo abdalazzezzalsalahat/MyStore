@@ -1,7 +1,7 @@
 
 'use strict';
 
-let times = ['6 am: '
+const times = ['6 am: '
             ,'7am: '
             ,'8 am: '
             ,'9 am: '
@@ -20,7 +20,7 @@ function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-let seattle = {
+const seattle = {
     place: 'Seattle',
     min: 23,
     max: 65,
@@ -29,33 +29,32 @@ let seattle = {
     totalSales: 0,
     getCookiesPH: function (){
         for (let i = 0; i< times.length; i++){
-            let cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
+            const cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
             this.totalSales += cPerH;
             this.cookiesPerHour.push(cPerH);
         }
     },
     render: function() {
         this.getCookiesPH();
-        let sec = document.getElementById('bodySection');
-        let title = document.createElement('h2');
+        const sec = document.getElementById('bodySection');
+        const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
-        let uList = document.createElement('ul');
+        const uList = document.createElement('ul');
         sec.appendChild(uList);
         for(let c = 0; c < times.length; c++){
-            let list = document.createElement('li');
+            const list = document.createElement('li');
             uList.appendChild(list);
             list.textContent = `${times[c]} ` + this.cookiesPerHour[c] + ' cookies';
         }
-        let total = document.createElement('li');
+        const total = document.createElement('li');
         uList.appendChild(total);
         total.textContent= `Total ${this.totalSales} cookies`;
         total.style.fontWeight = 'bold';
         total.style.fontSize = '20px';
     },
 };
-
-let tokyo = {
+const tokyo = {
     place: 'Tokyo',
     min: 3,
     max: 24,
@@ -64,32 +63,32 @@ let tokyo = {
     totalSales: 0,
     getCookiesPH: function (){
         for (let i = 0; i< times.length; i++){
-            let cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
+            const cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
             this.totalSales += cPerH;
             this.cookiesPerHour.push(cPerH);
         }
     },
     render: function() {
         this.getCookiesPH();
-        let sec = document.getElementById('bodySection');
-        let title = document.createElement('h2');
+        const sec = document.getElementById('bodySection');
+        const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
-        let uList = document.createElement('ul');
+        const uList = document.createElement('ul');
         sec.appendChild(uList);
         for(let c = 0; c < times.length; c++){
-            let list = document.createElement('li');
+            const list = document.createElement('li');
             uList.appendChild(list);
             list.textContent = `${times[c]} ` + this.cookiesPerHour[c] + ' cookies';
         }
-        let total = document.createElement('li');
+        const total = document.createElement('li');
         uList.appendChild(total);
         total.textContent= `Total ${this.totalSales} cookies`;
         total.style.fontWeight = 'bold';
         total.style.fontSize = '20px';
     },
 };
-let dubai = {
+const dubai = {
     place: 'Dubai',
     min: 11,
     max: 38,
@@ -98,32 +97,32 @@ let dubai = {
     totalSales: 0,
     getCookiesPH: function (){
         for (let i = 0; i< times.length; i++){
-            let cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
+            const cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
             this.totalSales += cPerH;
             this.cookiesPerHour.push(cPerH);
         }
     },
     render: function() {
         this.getCookiesPH();
-        let sec = document.getElementById('bodySection');
-        let title = document.createElement('h2');
+        const sec = document.getElementById('bodySection');
+        const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
-        let uList = document.createElement('ul');
+        const uList = document.createElement('ul');
         sec.appendChild(uList);
         for(let c = 0; c < times.length; c++){
-            let list = document.createElement('li');
+            const list = document.createElement('li');
             uList.appendChild(list);
             list.textContent = `${times[c]} ` + this.cookiesPerHour[c] + ' cookies';
         }
-        let total = document.createElement('li');
+        const total = document.createElement('li');
         uList.appendChild(total);
         total.textContent= `Total ${this.totalSales} cookies`;
         total.style.fontWeight = 'bold';
         total.style.fontSize = '20px';
     },
 };
-let paris = {
+const paris = {
     place: 'Paris',
     min: 20,
     max: 38,
@@ -132,32 +131,32 @@ let paris = {
     totalSales: 0,
     getCookiesPH: function (){
         for (let i = 0; i< times.length; i++){
-            let cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
+            const cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
             this.totalSales += cPerH;
             this.cookiesPerHour.push(cPerH);
         }
     },
     render: function() {
         this.getCookiesPH();
-        let sec = document.getElementById('bodySection');
-        let title = document.createElement('h2');
+        const sec = document.getElementById('bodySection');
+        const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
-        let uList = document.createElement('ul');
+        const uList = document.createElement('ul');
         sec.appendChild(uList);
         for(let c = 0; c < times.length; c++){
-            let list = document.createElement('li');
+            const list = document.createElement('li');
             uList.appendChild(list);
             list.textContent = `${times[c]} ` + this.cookiesPerHour[c] + ' cookies';
         }
-        let total = document.createElement('li');
+        const total = document.createElement('li');
         uList.appendChild(total);
         total.textContent= `Total ${this.totalSales} cookies`;
         total.style.fontWeight = 'bold';
         total.style.fontSize = '20px';
     },
 };
-let lima = {
+const lima = {
     place: 'Lima',
     min: 2,
     max: 16,
@@ -166,25 +165,25 @@ let lima = {
     totalSales: 0,
     getCookiesPH: function (){
         for (let i = 0; i< times.length; i++){
-            let cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
+            const cPerH = Math.floor(randomNumbers(this.min, this.max) * this.avg);
             this.totalSales += cPerH;
             this.cookiesPerHour.push(cPerH);
         }
     },
     render: function() {
         this.getCookiesPH();
-        let sec = document.getElementById('bodySection');
-        let title = document.createElement('h2');
+        const sec = document.getElementById('bodySection');
+        const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
-        let uList = document.createElement('ul');
+        const uList = document.createElement('ul');
         sec.appendChild(uList);
         for(let c = 0; c < times.length; c++){
-            let list = document.createElement('li');
+            const list = document.createElement('li');
             uList.appendChild(list);
             list.textContent = `${times[c]} ` + this.cookiesPerHour[c] + ' cookies';
         }
-        let total = document.createElement('li');
+        const total = document.createElement('li');
         uList.appendChild(total);
         total.textContent= `Total ${this.totalSales} cookies`;
         total.style.fontWeight = 'bold';
