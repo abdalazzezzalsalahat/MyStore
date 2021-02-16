@@ -9,7 +9,7 @@ body{
     background-size: cover;
 }
 .box{
-    width: 70%;
+    width: 40%;
     height: auto;
     box-shadow: black 0 0 10px;
     margin-left: auto;
@@ -17,6 +17,8 @@ body{
     margin-top: 150px;
     margin-bottom: 150px;
     border-radius: 5px;
+    float: left;
+    margin: 5%;
 }
 .bHead{
     width: 100%;
@@ -85,4 +87,78 @@ thead th {
 }
 th:hover, td:hover {
     background-color: rgba(255,255,255,0.3);
+}
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+} 
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+} 
+.icon-bar a:hover {
+    transform: scale(1.2);
+} 
+.facebook {
+    background: #3B5998;
+    color: white;
+}  
+.twitter {
+    background: #55ACEE;
+    color: white;
+} 
+.GitHub {
+    background: #000000;
+    color: white;
+} 
+.linkedin {
+    background: #007bb5;
+    color: white;
+} 
+.youtube {
+    background: #bb0000;
+    color: white;
+} 
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+.column img:hover {
+    opacity: 1;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    position: relative;
+    display: none;
+}
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
 }

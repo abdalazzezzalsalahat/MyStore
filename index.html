@@ -6,22 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zee Store</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="box">
-        <div class="bHead">
+    <section class="icon-bar">
+        <a href="https://web.facebook.com/abdalazez.alsalahat" class="facebook"><i class="fa fa-facebook"></i></a> 
+        <a href="https://twitter.com/abd_alsalahat" class="twitter"><i class="fa fa-twitter"></i></a> 
+        <a href="https://www.linkedin.com/in/abd-alazez-a-alsalahat-5a7078146/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/watch?v=b0ahREpQqsM" class="youtube"><i class="fa fa-youtube"></i></a> 
+      </section>
+    <section class="box">
+        <section class="bHead">
             <h2>Welcome to Zee Store</h2>
-        </div>
-        <div class="bBody">
-            <img src="https://images.thefishsite.com/fish/articles/processing/salmon-fillet.jpeg?profile=article-full" alt="salmon fish" 
-            style="margin-left: auto;margin-right: auto;width: 100%;">
-        </div>
-        <div class="bFoot">
+        </section>
+        <section class="bBody">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Locations</th>
+                        <th>Addresses</th>
+                        <th>Opens</th>
+                        <th>Closes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Seattle</td>
+                        <td>"USA, Washington - Seattle"</td>
+                        <td> 6 am</td>
+                        <td> 8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Tokyo</td>
+                        <td>"Japan, Tokyo, Minato City"</td>
+                        <td> 6 am</td>
+                        <td> 8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Dubai</td>
+                        <td>"UAE, Dubai - Downtown Dubai"</td>
+                        <td> 6 am</td>
+                        <td> 8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Paris</td>
+                        <td>"France, Paris"</td>
+                        <td> 6 am</td>
+                        <td> 8 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Lima</td>
+                        <td>"San Borja, Lima-Perú"</td>
+                        <td> 6 am</td>
+                        <td> 8 pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="bFoot">
             <a href="./store.html">Our sales over the world</a>
             <a href="./tableOfContent.html">Our lead table</a>
-        </div>
-    </div>
+        </section>
+    </section>
+    <section class="box">
+        <section class="bHead">
+            <h2>Welcome to Zee Store</h2>
+        </section>
+        <section class="bBody">
+            <section class="row">
+                <section class="column">
+                  <img src="https://images.thefishsite.com/fish/articles/processing/salmon-fillet.jpeg?profile=article-full" alt="salmon-fillet" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                  <img src="./imgs/cutter.jpeg" alt="cutter" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                  <img src="./imgs/family.jpg" alt="family" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                    <img src="./imgs/fish.jpg" alt="fish" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                <img src="./imgs/frosted-cookie.jpg" alt="frosted-cookie" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                    <img src="./imgs/salmon.png" alt="salmon" style="width:100%" onclick="myFunction(this);">
+                </section>
+                <section class="column">
+                    <img src="./imgs/shirt.jpg" alt="shirt" style="width:100%" onclick="myFunction(this);">
+                </section>
+            </section>
+        </section>
+        <section class="bFoot">
+            <section class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="width:100%">
+                <section id="imgtext"></section>
+            </section>
+        </section>
+    </section>
 </body>
 </html>
+
+<script>
+    function myFunction(imgs) {
+        let expandImg = document.getElementById("expandedImg");
+        let imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
