@@ -3,7 +3,7 @@
     font-family: 'Lexend Mega', sans-serif;
 }
 body{
-    background-image: linear-gradient(to left bottom, #C23D6B, #1ecbe1, #2c77da, #D98C26);
+    background-image: linear-gradient(to left bottom, #C23D6B, #1ecbe1, #2c77da, rgba(217, 140, 38, 0.7));
     color: #e3901c;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +20,7 @@ body{
 }
 .bHead{
     width: 100%;
-    background-image: linear-gradient(to left bottom, #C23D6B, #D98C26);
+    background-image: linear-gradient(to left bottom, #C23D6B, rgba(217, 140, 38, 0.7));
     border-bottom: 1px solid black;
     text-align: center;
     padding-top: 2em;
@@ -43,7 +43,7 @@ li{
 }
 .bFoot{
     width: 100%;
-    background-image: linear-gradient(to right top, #C23D6B, #D98C26);
+    background-image: linear-gradient(to right top, #C23D6B, rgba(217, 140, 38, 0.7));
     border-top: 1px solid black;
     text-align: center;
     padding-top: 2em;

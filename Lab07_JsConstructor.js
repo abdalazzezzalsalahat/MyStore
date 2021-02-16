@@ -15,7 +15,8 @@ const times = ['6 am:   '
             ,'5 pm:   '
             ,'6 pm:   '
             ,'7 pm:   '];
-
+let hSum = 0;
+const tSumArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -61,10 +62,12 @@ function Store (place, min, max, avg, cookiesPerHour, totalSales) {
             const tBodyData = document.createElement('td');
             tBodyRow.appendChild(tBodyData);
             tBodyData.textContent = `${this.cookiesPerHour[c]}`;
+            tSumArr[c] += this.cookiesPerHour[c];
         }
-        const tLastCol = document.createElement('td');
+        const tLastCol = document.createElement('th');
         tBodyRow.appendChild(tLastCol);
         tLastCol.textContent = `${this.totalSales}`;
+        tSumArr[tSumArr.length-1] += this.totalSales;
     };
     Store.renderFooter = function(){
         const tblFoot = document.getElementById('tblFoot');
@@ -73,12 +76,11 @@ function Store (place, min, max, avg, cookiesPerHour, totalSales) {
         const fFirstCol = document.createElement('th');
         tFootRow.appendChild(fFirstCol);
         fFirstCol.textContent = 'Hourly total';
-        for(let r = 0; r < times.length; r++){
-            const summation = 0;
-            summation += this.cookiesPerHour[r];
+        const arr = [];
+        for(let r = 0; r < tSumArr.length; r++){
             const tBodyCol = document.createElement('th');
             tFootRow.appendChild(tBodyCol);
-            tBodyCol.textContent = summation;
+            tBodyCol.textContent = tSumArr[r];
         }
         const fullSum = 0;        
     }
