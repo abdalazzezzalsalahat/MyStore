@@ -20,6 +20,15 @@ body{
     float: left;
     margin: 5%;
 }
+.tblbox{
+    width: 70%;
+    height: auto;
+    box-shadow: black 0 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    border-radius: 5px;
+}
 .bHead{
     width: 100%;
     background-image: linear-gradient(to left bottom, #C23D6B, rgba(217, 140, 38, 0.7));
@@ -161,4 +170,71 @@ th:hover, td:hover {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+.formSec{
+	width: 70%;
+	font-size: 16px;
+	background: rgba(136, 136, 136, 0.2);
+	padding: 2%;
+	border: 0px ;
+    box-shadow: black 0 0 10px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+.addPlace label {
+    position: relative;
+	display: block;
+	margin: 10px;
+	font-size: 20px;
+    color: #2e2e2e;
+    width: 30%;
+}
+.addPlace section label{
+	display: inline-block;
+    margin: 1%;
+    margin-left: 24%;
+}
+.addPlace section input{
+    margin-right: 20%;
+}
+.addPlace input[type=text]{
+	background: transparent;
+	border: none;
+	border-bottom: 1px dashed #2e2e2e;
+	width: 200px;
+	outline: none;
+	padding: 0px;
+	font-style: italic;
+	font-size: 20px;
+	color: #fff;
+}
+.addPlace input[type=text]:focus {
+	border-bottom: 1px solid #D9FFA9;
+}
+.btn {
+    background-color: #c23d6cc2;
+	border: none;
+	padding: 10px;
+    width: 20%;
+	color: #e2e2e2;
+	font-size: 16px;
+    transition: 1s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 5px;
+    position: relative;
+    left: 40%;
+    bottom: -40px;
+}
+.btn:hover {
+    font-size: 20px;
+    margin: 5px;
+    color: #2e2e2e;
+	background: #1ecae19a;
+    border: 2px solid #C23D6B;
 }

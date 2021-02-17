@@ -10,9 +10,30 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section class="box">
+    <section class="tblbox">
         <section class="bHead">
             <h2>Check stores</h2>
+        </section>
+        <section class="formSec">
+            <form id="addPlace" class="addPlace">
+                <section>
+                    <label for="locName"><span>Type in a Location:</span></label>
+                    <input type="text" name="locName" id="locName" placeholder="Location" required="true" />
+                </section>
+                <section>
+                    <label for="minTrgt"><span>Set a minimum sales target:</span></label>
+                    <input type="text" name="minTrgt" id="minTrgt" placeholder="Minimum target" required="true" />
+                </section>
+                <section>
+                    <label for="maxTrgt"><span>Set a maximum sales target:</span></label>
+                    <input type="text" name="maxTrgt" id="maxTrgt" placeholder="Maximum target" required="true" />
+                </section>
+                <section>
+                    <label for="avgTrgt"><span>Set a avarage sales target:</span></label>
+                    <input type="text" name="avgTrgt" id="avgTrgt" placeholder="Avarage target" required="true" />
+                </section>
+                <input type="submit" value="add To Table" class="btn"/>
+            </form>
         </section>
         <section class="bBody" id="bodySection">
             <table id="tbl">

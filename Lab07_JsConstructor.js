@@ -17,6 +17,7 @@ const times = ['6 am:   '
             ,'7 pm:   '];
 let hSum = 0;
 const tSumArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const placeForm = document.getElementById("addPlace");
 function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -54,7 +55,7 @@ function Store (place, min, max, avg, cookiesPerHour, totalSales) {
         this.getCookiesPH();
         const tblBody = document.getElementById('tblBody');
         const tBodyRow = document.createElement('tr');
-        tblHead.appendChild(tBodyRow);
+        tblBody.appendChild(tBodyRow);
         const tFirstCol = document.createElement('td');
         tBodyRow.appendChild(tFirstCol);
         tFirstCol.textContent = `${this.place}`;
@@ -64,7 +65,7 @@ function Store (place, min, max, avg, cookiesPerHour, totalSales) {
             tBodyData.textContent = `${this.cookiesPerHour[c]}`;
             tSumArr[c] += this.cookiesPerHour[c];
         }
-        const tLastCol = document.createElement('th');
+        const tLastCol = document.createElement('td');
         tBodyRow.appendChild(tLastCol);
         tLastCol.textContent = `${this.totalSales}`;
         tSumArr[tSumArr.length-1] += this.totalSales;
@@ -85,6 +86,19 @@ function Store (place, min, max, avg, cookiesPerHour, totalSales) {
         const fullSum = 0;        
     }
 }
+
+placeForm.addEventListener("submit",function (event){
+    event.preventDefault();
+    console.log(event.target);
+    const newLoc = event.target.locName.value; 
+    const min = parseInt(event.target.minTrgt.value);
+    const max = parseInt(event.target.maxTrgt.value);
+    const avg = parseFloat(event.target.avgTrgt.value);
+    const newPlace = new Store(newLoc, min, max, avg, [], 0);
+    randomNumbers(min, max);
+    newPlace.renderBody();
+    placeForm.reset();
+});
 
 const seattle = new Store('Seattle', 23, 65, 6.3, [], 0);
 const tokyo = new Store('Tokyo', 3, 24, 1.2, [], 0);
