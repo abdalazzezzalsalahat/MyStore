@@ -15,12 +15,10 @@ const times = ['6 am: '
             ,'5 pm: '
             ,'6 pm: '
             ,'7 pm: '];
-
 function randomNumbers(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-const seattle = {
+const seattle = { 
     place: 'Seattle',
     min: 23,
     max: 65,
@@ -36,7 +34,9 @@ const seattle = {
     },
     render: function() {
         this.getCookiesPH();
-        const sec = document.getElementById('bodySection');
+        const mainSec = document.getElementById('bodySection');
+        const sec = document.createElement('section');
+        mainSec.appendChild(sec);
         const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
@@ -70,7 +70,9 @@ const tokyo = {
     },
     render: function() {
         this.getCookiesPH();
-        const sec = document.getElementById('bodySection');
+        const mainSec = document.getElementById('bodySection');
+        const sec = document.createElement('section');
+        mainSec.appendChild(sec);
         const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
@@ -104,7 +106,9 @@ const dubai = {
     },
     render: function() {
         this.getCookiesPH();
-        const sec = document.getElementById('bodySection');
+        const mainSec = document.getElementById('bodySection');
+        const sec = document.createElement('section');
+        mainSec.appendChild(sec);
         const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
@@ -138,7 +142,9 @@ const paris = {
     },
     render: function() {
         this.getCookiesPH();
-        const sec = document.getElementById('bodySection');
+        const mainSec = document.getElementById('bodySection');
+        const sec = document.createElement('section');
+        mainSec.appendChild(sec);
         const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
@@ -172,7 +178,9 @@ const lima = {
     },
     render: function() {
         this.getCookiesPH();
-        const sec = document.getElementById('bodySection');
+        const mainSec = document.getElementById('bodySection');
+        const sec = document.createElement('section');
+        mainSec.appendChild(sec);
         const title = document.createElement('h2');
         sec.appendChild(title);
         title.textContent = this.place;
@@ -190,11 +198,8 @@ const lima = {
         total.style.fontSize = '20px';
     },
 };
-
-
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
-

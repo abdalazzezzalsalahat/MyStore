@@ -8,8 +8,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.box{
+.ndxBox{
     width: 40%;
+    height: auto;
+    box-shadow: black 0 0 10px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border-radius: 5px;
+    float: left;
+    margin: 5%;
+}
+.box{
+    width: 60%;
     height: auto;
     box-shadow: black 0 0 10px;
     margin-left: auto;
@@ -17,8 +27,6 @@ body{
     margin-top: 150px;
     margin-bottom: 150px;
     border-radius: 5px;
-    float: left;
-    margin: 5%;
 }
 .tblbox{
     width: 70%;
